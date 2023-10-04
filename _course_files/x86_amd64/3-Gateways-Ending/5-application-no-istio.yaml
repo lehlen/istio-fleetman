@@ -270,7 +270,7 @@ kind: VirtualService
 apiVersion: networking.istio.io/v1alpha3
 metadata:
   name: fleetman-webapp
-  namespace: default
+  namespace: fleetman
 spec:
   hosts:      # which incoming host are we applying the proxy rules to???
     - "*" # Copy the value in the gateway hosts - usually a Domain Name
@@ -291,7 +291,7 @@ kind: DestinationRule
 apiVersion: networking.istio.io/v1alpha3
 metadata:
   name: fleetman-webapp
-  namespace: default
+  namespace: fleetman
 spec:
   host: fleetman-webapp
   subsets:
